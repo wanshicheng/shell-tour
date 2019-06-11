@@ -1,0 +1,3 @@
+#!/bin/bash
+ssh hadoop102 'hbase-daemons.sh stop regionserver'
+ssh hadoop102 'hbase-daemon.sh stop master'

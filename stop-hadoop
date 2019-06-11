@@ -1,0 +1,4 @@
+#!/bin/bash
+ssh hadoop101 'mr-jobhistory-daemon.sh stop historyserver'
+ssh hadoop102 'stop-yarn.sh'
+ssh hadoop102 'stop-dfs.sh'

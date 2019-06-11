@@ -1,0 +1,14 @@
+#!/bin/bash
+if(($#==0))
+then
+	echo "请输入批量执行的命令！"
+	exit;
+fi
+
+echo "要执行的命令是: $@"
+
+for((i=101;i<=103;i++))
+do
+	echo --------------------hadoop$i--------------------
+	ssh hadoop$i $@
+done

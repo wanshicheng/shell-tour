@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ssh hadoop102 'start-dfs.sh'
+ssh hadoop102 'start-yarn.sh'
+ssh hadoop101 'mr-jobhistory-daemon.sh start historyserver'

@@ -1,0 +1,4 @@
+#!/bin/bash
+ssh hadoop101 'zkServer.sh start'
+ssh hadoop102 'zkServer.sh start'
+ssh hadoop103 'zkServer.sh start'
