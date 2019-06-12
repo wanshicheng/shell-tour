@@ -1,0 +1,24 @@
+#!/bin/bash
+export COLUMNS
+col=${COLUMNS:-1}
+line=""
+symbol="-"
+title=$1
+no_en=`echo $title |awk '{print gensub(/[!-~]/,"","g",$0)}'`
+t_num=$(( ${#title}+${#no_en} ))
+half=$(((col-t_num)/2))
+remainder=$(((col-t_num)%2))
+
+for((i=1;i<=half;i++));  
+do   
+line=$line$symbol
+done 
+
+line=$line$title
+
+for((i=1;i<=$((half+remainder));i++));
+do
+line=$line$symbol
+done
+
+echo $line
