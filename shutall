@@ -1,0 +1,14 @@
+#!/bin/bash
+
+current_host=`hostname`
+hosts="hadoop102 hadoop103 hadoop104"
+
+for host in $hosts
+do
+	if [ $host != $current_host ]
+	then
+		ssh $host "echo $1|sudo -S halt 0"
+	fi
+done
+
+echo $1|sudo -S halt 0
