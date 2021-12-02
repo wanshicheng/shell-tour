@@ -69,7 +69,7 @@ while IFS= read -r i; do
             else
                 NAMES=(${i//// })
                 IMAGE_NAME=${NAMES[-1]}
-                NEW_TAG="${repository}/{$IMAGE_NAME}"
+                NEW_TAG="${repository}/${IMAGE_NAME}"
                 if docker tag ${i} $NEW_TAG > /dev/null 2>&1; then
                     pulled="${pulled} $NEW_TAG"
                 else
