@@ -22,7 +22,7 @@ mv ./jdk1.8.0_381 ./jdk
 
 sudo sysctl -w vm.max_map_count=2000000
 sudo cp /etc/sysctl.conf /etc/sysctl.conf.bak
-sudo bash -c 'echo >> /etc/sysctl.conf <<EOF
+sudo bash -c 'cat >> /etc/sysctl.conf <<EOF
 vm.max_map_count=2000000
 EOF
 '
